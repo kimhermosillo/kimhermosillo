@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class Footer extends Component {
     render() {
     return (
-<p>this is the footer</p>
+<p>720 / 675 / 2975 | mine@kimhermosillo.com</p>
         )
     }
 }

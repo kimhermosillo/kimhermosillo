@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class Header extends Component {
     render() {
     return (
-<p>this is the header</p>
+<h1>mine</h1>
         )
     }
 }

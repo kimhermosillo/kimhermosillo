@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class Body extends Component {
     render() {
     return (
-<p>this is the body</p>
+<p>is there anything you want to be shown on the screen at all times?</p>
         )
     }
 }
