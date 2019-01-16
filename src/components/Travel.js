@@ -1,14 +1,33 @@
 import React, { Component } from 'react';
+import Spain from './Spain'
+import Sweden from './Sweden'
 
-class Travel extends Component {
-    render() {
-    return (
-<p> MEXICO JANUARY 2019 //
-    PERU FEBRUARY 2019 // 
-    NEW ORLEANS MARCH 2019
-</p>
-        )
-    }
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+function Travel() {
+  return (
+    <Router>
+      <div>
+      <Link to="/Spain">Spain</Link>
+      <Route path='/Spain' component={Spain} /> 
+    
+
+        
+      </div>
+    </Router>
+  );
 }
 
-export default Travel
+    
+
+
+export default Travel;
+
+
+
+
+
+
+
+
+
