@@ -28,7 +28,7 @@ class Body extends Component {
             <p>
                 {/* <Nav /> */}
                 {/* <Route path='/About' exact Component{About} /> */}
-hi
+ANYWHERE BUT HERE
                 {/* <Route path='/Travel' exact Compone{Travel} /></p> */}
         </p>
         )
