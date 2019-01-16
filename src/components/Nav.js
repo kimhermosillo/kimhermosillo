@@ -12,16 +12,8 @@ function BasicExample() {
     return (
         <Router>
             <div>
-                <Link to="/">Home</Link>
-                |
-                <Link to='/Work'>Work</Link>
-                |
-              <Link to="/About">About</Link>
-                |
-              <Link to="/Travel">Travel</Link>
-
-                <hr />
-
+                <Link to="/">Home</Link> | <Link to='/Work'>Work</Link> | <Link to="/About">About</Link>  | <Link to="/Travel">Travel</Link>
+                <hr /> 
                 <Route exact path="/" component={Home} />
                 <Route path='/Work' component={Work} /> 
                 <Route path="/About" component={About} />
@@ -39,13 +31,6 @@ function Home() {
     );
 }
 
-//   function About() {
-//     return (
-//       <div>
-//         <h2>About</h2>
-//       </div>
-//     );
-//   }
 
 function Topics({ match }) {
     return (
@@ -82,49 +67,3 @@ function Topic({ match }) {
 }
 
 export default BasicExample;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class Nav extends Component {
-//     render() {
-//     return (
-//         <Router>
-// <p><Link to ='/Work'>Work</Link> | <Link to ='/About'>About</Link> | <Link to ='/Travel'>Travel</Link>
-
-
-
-
-//         <Route path='/About' exact Component={About} />
-
-//    <Route path='/Travel' exact Component={Travel} />
-//    </p>
-
-//    </Router>
-//     )
-
-
-//     }
-// }
-
-// export default Nav
-

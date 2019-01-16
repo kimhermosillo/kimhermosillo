@@ -1,36 +1,21 @@
 
 import React, { Component } from 'react';
-import Nav from './Nav'
-import Travel from './Travel'
-import Work from './Work'
-import About from './About'
-
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//THESE ARE VITAL ^^  vv COMPONENTS
+import Footer from './Footer';
 
 
 class Body extends Component {
     render() {
         return (
             <p>
-                {/* <Nav /> */}
-                {/* <Route path='/About' exact Component{About} /> */}
-ANYWHERE BUT HERE
-                {/* <Route path='/Travel' exact Compone{Travel} /></p> */}
-        </p>
+
+                ANYWHERE BUT HERE
+<Footer />
+                {/* FOOTER IS ADDED ON THIS COMPONENT SO IT IS ONLY SHOWN IN THE MAIN PAGE
+AFTER THAT A NEW COMPONENT WILL APPEAR WITH THE LOGO ON THE LEFT BOTTOM SIDE */}
+
+            </p>
         )
     }
 }
