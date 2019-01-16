@@ -8,8 +8,21 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 class Nav extends Component {
     render() {
     return (
-<p><Link to ='/Work'>Work</Link> | about | travel</p>
-        )
+        <Router>
+<p><Link to ='/Work'>Work</Link> | <Link to ='/About'>About</Link> | <Link to ='/Travel'>Travel</Link>
+        
+    
+       
+        
+        <Route path='/About' exact Component={About} />
+     
+   <Route path='/Travel' exact Component={Travel} />
+   </p>
+
+   </Router>
+    )
+        
+    
     }
 }
 
