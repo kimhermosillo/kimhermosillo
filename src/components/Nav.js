@@ -14,6 +14,8 @@ function BasicExample() {
             <div>
                 <Link to="/">Home</Link>
                 |
+                <Link to='/Work'>Work</Link>
+                |
               <Link to="/About">About</Link>
                 |
               <Link to="/Travel">Travel</Link>
@@ -21,6 +23,7 @@ function BasicExample() {
                 <hr />
 
                 <Route exact path="/" component={Home} />
+                <Route path='/Work' component={Work} /> 
                 <Route path="/About" component={About} />
                 <Route path="/Travel" component={Travel} />
             </div>
