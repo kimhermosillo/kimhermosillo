@@ -2,28 +2,126 @@
 import React, { Component } from 'react';
 import Work from './Work'
 import About from './About'
+import Body from './Body'
 import Travel from './Travel'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
-class Nav extends Component {
-    render() {
+
+
+function BasicExample() {
     return (
         <Router>
-<p><Link to ='/Work'>Work</Link> | <Link to ='/About'>About</Link> | <Link to ='/Travel'>Travel</Link>
-        
-    
-       
-        
-        <Route path='/About' exact Component={About} />
-     
-   <Route path='/Travel' exact Component={Travel} />
-   </p>
+            <div>
+                <Link to="/">Home</Link>
+                |
+              <Link to="/About">About</Link>
+                |
+              <Link to="/Travel">Travel</Link>
 
-   </Router>
-    )
-        
-    
-    }
+                <hr />
+
+                <Route exact path="/" component={Home} />
+                <Route path="/About" component={About} />
+                <Route path="/Travel" component={Travel} />
+            </div>
+        </Router>
+    );
 }
 
-export default Nav
+function Home() {
+    return (
+        <div>
+            <Body />
+        </div>
+    );
+}
+
+//   function About() {
+//     return (
+//       <div>
+//         <h2>About</h2>
+//       </div>
+//     );
+//   }
+
+function Topics({ match }) {
+    return (
+        <div>
+            <h2>Topics</h2>
+            <ul>
+                <li>
+                    <Link to={`${match.url}/rendering`}>Rendering with React</Link>
+                </li>
+                <li>
+                    <Link to={`${match.url}/components`}>Components</Link>
+                </li>
+                <li>
+                    <Link to={`${match.url}/props-v-state`}>Props v. State</Link>
+                </li>
+            </ul>
+
+            <Route path={`${match.path}/:topicId`} component={Topic} />
+            <Route
+                exact
+                path={match.path}
+                render={() => <h3>Please select a topic.</h3>}
+            />
+        </div>
+    );
+}
+
+function Topic({ match }) {
+    return (
+        <div>
+            <h3>{match.params.topicId}</h3>
+        </div>
+    );
+}
+
+export default BasicExample;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class Nav extends Component {
+//     render() {
+//     return (
+//         <Router>
+// <p><Link to ='/Work'>Work</Link> | <Link to ='/About'>About</Link> | <Link to ='/Travel'>Travel</Link>
+
+
+
+
+//         <Route path='/About' exact Component={About} />
+
+//    <Route path='/Travel' exact Component={Travel} />
+//    </p>
+
+//    </Router>
+//     )
+
+
+//     }
+// }
+
+// export default Nav
+
