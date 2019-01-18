@@ -3,33 +3,99 @@ import Spain from './Spain'
 import Sweden from './Sweden'
 import { HashRouter } from 'react-router-dom'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Barcelona from './cities/Barcelona';
+import Madrid from './cities/Madrid';
 
-function Travel() {
+////////////////////////////////////////////////////////////
+// first our route components
+function Sandwiches() {
+  return <h2>Sandwiches</h2>;
+}
+
+function vistSpain({ routes }) {
   return (
-  <div>
-    <HashRouter basename='/travel'/>
-    <Link to="travel/Spain">Spain</Link> | 
-      <Route path='travel/Spain' component={Spain} /> 
-      
-    <Link to='travel/Sweden'> Sweden</Link>
-<Route path ='travel/Sweden' component={Sweden} />
-        
+    <div>
+      <h2>Spain</h2>
+      <ul>
+        <li>
+          <Link to="/spain/barcelona">barcelona</Link>
+        </li>
+        <li>
+          <Link to="/spain/madrd">madrid</Link>
+        </li>
+      </ul>
+
+      {routes.map((route, i) => (
+        <RouteWithSubRoutes key={i} {...route} />
+      ))}
     </div>
- 
-    
   );
 }
 
-    
+function visitBarcelona() {
+  return <h3>Barcelona</h3>;
+}
 
+function visitMadrid() {
+  return <h3>Madrid</h3>;
+}
 
-export default Travel;
+////////////////////////////////////////////////////////////
+// then our route config
+const routes = [
+  {
+    path: "/sweden",
+    component: Sweden
+  },
+  {
+    path: "/spain",
+    component: Spain,
+    routes: [
+      {
+        path: "/spain/barcelona",
+        component: Barcelona
+      },
+      {
+        path: "/spain/madrid",
+        component: Madrid
+      }
+    ]
+  }
+];
 
+// wrap <Route> and use this everywhere instead, then when
+// sub routes are added to any route it'll work
+function RouteWithSubRoutes(route) {
+  return (
+    <Route
+      path={route.path}
+      render={props => (
+        // pass the sub-routes down to keep nesting
+        <route.component {...props} routes={route.routes} />
+      )}
+    />
+  );
+}
 
+function RouteConfigExample() {
+  return (
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/spain">Spain</Link>
+          </li>
+          <li>
+            <Link to="/sweden">Sweden</Link>
+          </li>
+        </ul>
 
+        {routes.map((route, i) => (
+          <RouteWithSubRoutes key={i} {...route} />
+        ))}
+      </div>
+    </Router>
+  );
+}
 
-
-
-
-
-
+export default RouteConfigExample;

@@ -1,14 +1,11 @@
 import React, { Component } from 'react';
 
-class Sweden extends Component {
+class Madrid extends Component {
     render() {
     return (
-<p>HI THIS IS ME</p>
+<p>MADRID, ESPA˜NA</p>
         )
     }
 }
 
-export default Sweden
-
-
-
+export default Madrid
