@@ -8,6 +8,20 @@ import Footer from './components/Footer'
 //router
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 
+function Welcome(props) {
+  return <h1>Hello, {props.name}</h1>
+}
+
+function hello () {
+  return (
+    <div>
+      <Welcome name='Kim' />
+      <Welcome name='Ciaran' />
+      <Welcome name='Angie' />
+    </div>
+  )
+}
+
 class App extends Component {
   render() {
     return (
@@ -15,6 +29,7 @@ class App extends Component {
       <div>
      <Header />
      <Nav />
+     
      {/* <Body /> */}
      </div>
 
@@ -24,5 +39,9 @@ class App extends Component {
     )
   }
 }
+
+hello()
+
+
 
 export default App;
