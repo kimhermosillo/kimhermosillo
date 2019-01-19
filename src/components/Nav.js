@@ -6,6 +6,7 @@ import Body from './Body'
 import Travel from './Travel'
 import Spain from './Spain'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import '../App.css';
 
 
 
@@ -13,7 +14,7 @@ function BasicExample() {
     return (
         <Router>
             <div>
-               <button onClick={this}><Link to="/">Home</Link> </button>| <button><Link to='/Work'>Work</Link></button> | <Link to="/About">About</Link>  | <Link to="/Travel">Travel</Link>
+               <button onClick={this} className='navHome'><Link to="/">Home</Link> </button> | <button className='navWork'><Link to='/Work'>Work</Link></button> | <button className='navAbout'><Link to="/About">About</Link></button>  | <button className='navTravel'><Link to="/Travel">Travel</Link></button>
                 <hr /> 
                 <Route exact path="/" component={Home} />
                 <Route path='/Work' component={Work} /> 
