@@ -1,3 +1,7 @@
 .bodySimple, .header, .navHome, .navWork, .navAbout, .navTravel {
   font-variant: small-caps
 }
+
+.header, .navLinks {
+  text-align: center;
+}
