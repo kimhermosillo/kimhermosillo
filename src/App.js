@@ -14,13 +14,11 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
-  root: {
-    flexGrow: 1
-  },
+ 
   paper: {
-    padding: theme.spacing.unit * 2,
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
+    
+    // textAlign: 'center',
+    // color: theme.palette.text.secondary,
   }
 })
 
@@ -30,49 +28,26 @@ function CenteredGrid(props) {
 
 return (
   <div className={classes.root}>
-    <Grid container spacing={24}>
+    <Grid container spacing={8}>
       <Grid item xs={12}>
-      <Paper className={classes.paper}><Header /></Paper>
+      <Paper><Header /></Paper>
       </Grid>
-      <Grid item xs={6}>
-          <Paper className={classes.paper}><Nav /></Paper>
+      <Grid item xs={12}>
+          <Paper><Nav /></Paper>
       </Grid>
-      <Grid item xs={6}>
-          <Paper className={classes.paper}><Body /></Paper>
+      <Grid item xs={12}>
+          <Paper className='bodyFooter'><Footer /></Paper>
       </Grid>
     </Grid>
   </div>
 )
 }
 
-CenteredGrid.propTypes = { 
-  classes: PropTypes.object.isRequired
-}
+
 
 export default withStyles(styles)(CenteredGrid)
 
 
-// class App extends Component {
-//   render() {
-//     return (
-//       <Router>
-//         <div>
-//           <Header />
-//           <Nav />
 
-//           {/* <Body /> */}
-//         </div>
-
-
-
-//       </Router>
-//     )
-//   }
-// }
-
-
-
-
-// export default App
 
 

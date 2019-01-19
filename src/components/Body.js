@@ -11,8 +11,8 @@ class Body extends Component {
         return (
             <p className='bodySimple'>
 
-                KIMBERLY HERMOSILLO
-            <Footer />
+             
+            
 
                 {/* FOOTER IS ADDED ON THIS COMPONENT SO IT IS ONLY SHOWN IN THE MAIN PAGE
 AFTER THAT A NEW COMPONENT WILL APPEAR WITH THE LOGO ON THE LEFT BOTTOM SIDE */}

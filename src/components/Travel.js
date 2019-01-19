@@ -8,22 +8,19 @@ import Madrid from './cities/Madrid';
 
 ////////////////////////////////////////////////////////////
 // first our route components
-function Sandwiches() {
-  return <h2>Sandwiches</h2>;
-}
 
 function vistSpain({ routes }) {
   return (
     <div>
       <h2>Spain</h2>
-      <ul>
-        <li>
-          <Link to="/spain/barcelona">barcelona</Link>
-        </li>
-        <li>
+      
+        
+          <Link  to="/spain/barcelona">barcelona</Link>
+        
+        
           <Link to="/spain/madrd">madrid</Link>
-        </li>
-      </ul>
+        
+      
 
       {routes.map((route, i) => (
         <RouteWithSubRoutes key={i} {...route} />
@@ -77,7 +74,7 @@ function RouteWithSubRoutes(route) {
   );
 }
 
-function RouteConfigExample() {
+function RouteConfig() {
   return (
     <Router>
       <div>
@@ -98,4 +95,4 @@ function RouteConfigExample() {
   );
 }
 
-export default RouteConfigExample;
+export default RouteConfig
