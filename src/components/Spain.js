@@ -11,7 +11,7 @@ class Spain extends Component {
         A beautiful country. Choose between Barcelona or Madrid to view my adventures.
 
         <Router>
-            <div>
+            <div className='spain'>
                 <Link to="/barcelona">Barcelona</Link> | <Link to='/madrid'>Madrid</Link> 
                 <hr /> 
                 <Route exact path="/barcelona" component={Barcelona} />
@@ -28,3 +28,4 @@ class Spain extends Component {
 }
 
 export default Spain
+

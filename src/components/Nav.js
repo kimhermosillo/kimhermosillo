@@ -13,7 +13,7 @@ function BasicExample() {
     return (
         <Router>
             <div>
-                <Link to="/">Home</Link> | <Link to='/Work'>Work</Link> | <Link to="/About">About</Link>  | <Link to="/Travel">Travel</Link>
+               <button onClick={this}><Link to="/">Home</Link> </button>| <button><Link to='/Work'>Work</Link></button> | <Link to="/About">About</Link>  | <Link to="/Travel">Travel</Link>
                 <hr /> 
                 <Route exact path="/" component={Home} />
                 <Route path='/Work' component={Work} /> 
