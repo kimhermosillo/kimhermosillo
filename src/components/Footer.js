@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-class Footer extends Component {
-    render() {
-    return (
-<p className='Footer'>720 / 675 / 2974 | mine@kimhermosillo.com</p>
-        )
-    }
+const Footer = () => {
+    return ( 
+        <footer>
+            <small>720 / 675 / 2974 | mine@kimhermosillo.com</small>
+        </footer>
+    )
 }
+
+
+
 
 export default Footer
