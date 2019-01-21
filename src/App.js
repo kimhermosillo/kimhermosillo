@@ -27,7 +27,7 @@ function CenteredGrid(props) {
 
 
 return (
-  <div className={classes.root}>
+  <div >
     <Grid container spacing={1}>
       <Grid item xs={12}>
       <Grid><Header /></Grid>
