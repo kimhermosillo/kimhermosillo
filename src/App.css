@@ -4,12 +4,10 @@
 
 header, .navLinks {
   text-align: center;
+  padding: 10vh; 
 }
 
-.bodyFooter {
-  justify-content: flex-end;
-  text-align: center;
-}
+
 
 .work {
   background-color: red;
@@ -24,5 +22,11 @@ img {
   align-content: center;
   align-items: center;
   height: 10vw;
+
+}
+
+footer {
+  padding: 24vw 5vh 5vw 0vh;
+  text-align: center;
 
 }
