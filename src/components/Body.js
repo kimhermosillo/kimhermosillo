@@ -7,8 +7,7 @@ import '../App.css';
 
 
 
-class Body extends Component {
-    render() {
+const Body = () => {
         return (
             <p className='bodySimple'>
 
@@ -21,7 +20,6 @@ AFTER THAT A NEW COMPONENT WILL APPEAR WITH THE LOGO ON THE LEFT BOTTOM SIDE */}
             </p>
         )
     }
-}
 
 export default Body
 

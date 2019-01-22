@@ -15,7 +15,8 @@ function BasicExample() {
     return (
         <Router>
             <div className='navLinks'>
-               {/* <button onClick={this} className='navHome'><Link to="/">Home</Link> </button> */} <button className='navWork'><Link to='/Work'>Work</Link></button> <button className='navAbout'><Link to="/About">About</Link></button>  <button className='navTravel'><Link to="/Travel">Travel</Link></button> 
+               {/* <button onClick={this} className='navHome'><Link to="/">Home</Link> </button> */} <button className='navWork'><Link to='/Work'>Work</Link></button> <button className='navAbout'><Link to="/About">About</Link></button>  
+               <div className='travels'>               <button className='navTravel'><Link to="/Travel">Travel</Link></button> </div>
            
                 <Route exact path="/" component={Home} />
                 <Route path='/Work' component={Work} /> 
