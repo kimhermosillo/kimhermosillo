@@ -11,7 +11,7 @@ import Madrid from './cities/Madrid';
 
 function vistSpain({ routes }) {
   return (
-    <div>
+    <div className='Spain'>
       <h2>Spain</h2>
       
         
@@ -77,15 +77,12 @@ function RouteWithSubRoutes(route) {
 function RouteConfig() {
   return (
     <Router>
-      <div>
-        <ul>
-          <li>
+      <div className='Countries'>
+        
             <Link to="/spain">Spain</Link>
-          </li>
-          <li>
+           | 
             <Link to="/sweden">Sweden</Link>
-          </li>
-        </ul>
+        
 
         {routes.map((route, i) => (
           <RouteWithSubRoutes key={i} {...route} />

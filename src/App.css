@@ -2,9 +2,31 @@
   font-variant: small-caps
 }
 
-header, .navLinks {
+.navAbout {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.navWork {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+.navTravel {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+
+}
+
+header {
   text-align: center;
-  padding: 10vh; 
+  position: absolute;
+  left: 0;
+  top: 20%;
+  width: 100%;
 }
 
 
@@ -28,7 +50,7 @@ img {
 footer {
   position: fixed;
   bottom: 0;
-  right: 0;
+  left: 0;
 
 }
 
